@@ -20,10 +20,10 @@ public class CarServiceImpl implements CarService {
     }
     @Override
     public List<Car> CAR_LIST(Integer count) {
-        if (count != null || count < 5) {
-            return car.subList(0, count);
-        } else {
+        if (count == null || count >= 5) {
             return car;
+        } else {
+            return car.subList(0, count);
         }
     }
 }
