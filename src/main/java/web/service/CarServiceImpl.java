@@ -18,8 +18,9 @@ public class CarServiceImpl implements CarService {
         car.add(new Car(4,"Audi", 46));
         car.add(new Car(5,"Chevrolet", 24));
     }
+
     @Override
-    public List<Car> CAR_LIST(Integer count) {
+    public List<Car> getAllCars(Integer count) {
         if (count == null || count >= 5) {
             return car;
         } else {

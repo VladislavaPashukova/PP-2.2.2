@@ -19,7 +19,7 @@ private final CarServiceImpl carService;
 
     @GetMapping("/cars")
     public String printCars(@RequestParam(value = "count", required = false) Integer count, Model model) {
-        model.addAttribute("cars", carService.CAR_LIST(count));
+        model.addAttribute("cars", carService.getAllCars(count));
         return "cars";
     }
 }
